@@ -7,6 +7,7 @@ const fileUpload = require('express-fileupload');
 const router = require('./routes/index');
 const errorHandler = require('./middleware/errorHandlingMiddleware');
 const path = require('path');
+const { log } = require('console');
 
 const PORT = process.env.PORT || 3000;
 
@@ -30,3 +31,4 @@ const start = async () => {
 };
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
