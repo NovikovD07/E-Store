@@ -9,7 +9,7 @@ const errorHandler = require('./middleware/errorHandlingMiddleware');
 const path = require('path');
 const { log } = require('console');
 
-const PORT = process.env.PORT || 3000;
+
 
 const app = express();
 app.use(cors());
@@ -20,6 +20,7 @@ app.use('/api', router);
 //обратботка ошибки
 app.use(errorHandler);
 
+const PORT = process.env.PORT || 3000;
 const start = async () => {
   try {
     await sequelize.authenticate();
